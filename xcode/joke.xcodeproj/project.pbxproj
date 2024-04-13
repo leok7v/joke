@@ -14,6 +14,9 @@
 		B371F5DA2BCA234600840A00 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D62BCA234600840A00 /* Downloader.swift */; };
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
+		B3CB9A002BCA29F500C4CFDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FE2BCA29F500C4CFDD /* README.md */; };
+		B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FF2BCA29F500C4CFDD /* LICENSE */; };
+		B3CB9A032BCA2AA400C4CFDD /* .github in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A022BCA2AA400C4CFDD /* .github */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B371F5D72BCA234600840A00 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../src/Toast.swift; sourceTree = "<group>"; };
 		B371F5D82BCA234600840A00 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../src/Service.swift; sourceTree = "<group>"; };
 		B3C2C19B2BCA1FE800F9ABEE /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3CB99FE2BCA29F500C4CFDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B3CB99FF2BCA29F500C4CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B3CB9A022BCA2AA400C4CFDD /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,7 @@
 		B3C2C1922BCA1FE800F9ABEE = {
 			isa = PBXGroup;
 			children = (
+				B3CB9A022BCA2AA400C4CFDD /* .github */,
 				B371F5D62BCA234600840A00 /* Downloader.swift */,
 				B371F5D42BCA234600840A00 /* service.c */,
 				B371F5D52BCA234600840A00 /* service.h */,
@@ -54,6 +61,8 @@
 				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
 				B30810B82BCA211F001EF0AC /* joke.entitlements */,
 				B30810B62BCA2109001EF0AC /* Assets.xcassets */,
+				B3CB99FF2BCA29F500C4CFDD /* LICENSE */,
+				B3CB99FE2BCA29F500C4CFDD /* README.md */,
 				B3C2C19C2BCA1FE800F9ABEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CB9A032BCA2AA400C4CFDD /* .github in Resources */,
+				B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */,
+				B3CB9A002BCA29F500C4CFDD /* README.md in Resources */,
 				B30810B72BCA2109001EF0AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
