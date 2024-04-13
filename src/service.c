@@ -29,9 +29,10 @@ static void* process_output(void *arg) {
     while ((bytes_read = read(pipe_read_fd, buffer, sizeof(buffer) - 4)) > 0) {
         buffer[bytes_read] = 0x00;
         for (int i = 0; i < bytes_read; ++i) {
+            text[text_len++] = buffer[i];
             if (buffer[i] <= 0x20) { // Check for whitespace or control characters
                 if (text_len > 0) {
-                    if (strrchr(puntuation, text[text_len - 1]) != null) {
+                    if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
                         text[text_len++] = '\n';
                     }
                     text[text_len] = 0x00;
@@ -39,9 +40,8 @@ static void* process_output(void *arg) {
                     text_len = 0; // Reset text array for the next word
                 }
             } else {
-                text[text_len++] = buffer[i]; // Accumulate characters
                 if (text_len >= (int)sizeof(text) - 1) {
-                    if (strrchr(puntuation, text[text_len - 1]) != null) {
+                    if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
                         text[text_len++] = '\n';
                     }
                     text[sizeof(text) - 1] = 0x00;
@@ -53,7 +53,7 @@ static void* process_output(void *arg) {
     }
     // Process any remaining characters in buffer
     if (text_len > 0) {
-        if (strrchr(puntuation, text[text_len - 1]) != null) {
+        if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
             text[text_len++] = '\n';
         }
         text[text_len] = 0x00;
