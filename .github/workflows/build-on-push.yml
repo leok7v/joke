@@ -25,9 +25,9 @@ jobs:
 
       - name: Build Project
         run: |
-          xcodebuild -scheme YLIP -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -scheme xcode/joke -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
       - name: Archive Project
         run: |
-          xcodebuild -scheme YLIP -sdk iphoneos -configuration Release archive -archivePath ./build/YLIP.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          xcodebuild -scheme xcode/joke -sdk iphoneos -configuration Release archive -archivePath ./build/joke.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
