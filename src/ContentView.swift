@@ -1,11 +1,8 @@
 import SwiftUI
 
-
-
-
 struct ContentView: View {
     
-    @State private var displayText = "Hello, world!"
+    @State private var displayText = "Once upon a time "
     @State private var errorText = ""
     @State private var statusText = ""
     @State private var showToast = false;
@@ -75,7 +72,6 @@ struct ContentView: View {
     }
 
     func downloaded() {
-        print("Download successful")
         statusText = ""
         Service.ini()
         Service.load(file: downloader.destination().path()) { err, text in
@@ -91,8 +87,7 @@ struct ContentView: View {
     }
     
     func loaded() {
-        print("Load successful")
-        Service.generate(prompt: "foo bar",
+        Service.generate(prompt: gen_prompt,
              token: { text in DispatchQueue.main.async { token(text) } },
              done: { DispatchQueue.main.async { done() } })
     }
