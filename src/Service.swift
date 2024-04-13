@@ -32,8 +32,9 @@ struct Service {
     static func load(file: String,
                      loaded: @escaping (Int32, String) -> Void) {
         loaded_closure = loaded
-        file.withCString { cFile in
-            service.load(cFile)
+        file.withCString { cs in
+            print(String(cString: cs))
+            service.load(cs)
         }
     }
     

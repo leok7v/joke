@@ -10,7 +10,7 @@
 		B30810B42BCA20E6001EF0AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30810B22BCA20E6001EF0AC /* ContentView.swift */; };
 		B30810B52BCA20E6001EF0AC /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30810B32BCA20E6001EF0AC /* app.swift */; };
 		B30810B72BCA2109001EF0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30810B62BCA2109001EF0AC /* Assets.xcassets */; };
-		B371F5D92BCA234600840A00 /* service.c in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D42BCA234600840A00 /* service.c */; };
+		B371F5D92BCA234600840A00 /* service.c in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D42BCA234600840A00 /* service.c */; settings = {COMPILER_FLAGS = "-v -I.. -I../llama.cpp -I../llama.cpp/examples/main"; }; };
 		B371F5DA2BCA234600840A00 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D62BCA234600840A00 /* Downloader.swift */; };
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
@@ -38,6 +38,26 @@
 		B3C602252BCB0E6600276715 /* unicode-data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602112BCB0E6600276715 /* unicode-data.cpp */; };
 		B3C602262BCB0E6600276715 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C602122BCB0E6600276715 /* ggml.c */; };
 		B3C602272BCB0E6600276715 /* ggml-backend.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C602132BCB0E6600276715 /* ggml-backend.c */; };
+		B3C602292BCB13F700276715 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602282BCB13F700276715 /* main.cpp */; settings = {COMPILER_FLAGS = "-DJOKE"; }; };
+		B3C6023E2BCB16A200276715 /* common.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022A2BCB16A100276715 /* common.h */; };
+		B3C6023F2BCB16A200276715 /* train.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022B2BCB16A100276715 /* train.cpp */; };
+		B3C602402BCB16A200276715 /* train.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022C2BCB16A100276715 /* train.h */; };
+		B3C602412BCB16A200276715 /* grammar-parser.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022D2BCB16A100276715 /* grammar-parser.h */; };
+		B3C602422BCB16A200276715 /* ngram-cache.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022E2BCB16A100276715 /* ngram-cache.h */; };
+		B3C602432BCB16A200276715 /* sampling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6022F2BCB16A100276715 /* sampling.cpp */; };
+		B3C602442BCB16A200276715 /* json.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602302BCB16A100276715 /* json.hpp */; };
+		B3C602452BCB16A200276715 /* json-schema-to-grammar.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602312BCB16A100276715 /* json-schema-to-grammar.h */; };
+		B3C602462BCB16A200276715 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602322BCB16A100276715 /* common.cpp */; };
+		B3C602472BCB16A200276715 /* base64.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602332BCB16A200276715 /* base64.hpp */; };
+		B3C602482BCB16A200276715 /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602342BCB16A200276715 /* console.cpp */; };
+		B3C6024A2BCB16A200276715 /* console.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602362BCB16A200276715 /* console.h */; };
+		B3C6024B2BCB16A200276715 /* log.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602372BCB16A200276715 /* log.h */; };
+		B3C6024C2BCB16A200276715 /* build-info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602382BCB16A200276715 /* build-info.cpp */; };
+		B3C6024D2BCB16A200276715 /* ngram-cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602392BCB16A200276715 /* ngram-cache.cpp */; };
+		B3C6024E2BCB16A200276715 /* grammar-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6023A2BCB16A200276715 /* grammar-parser.cpp */; };
+		B3C6024F2BCB16A200276715 /* json-schema-to-grammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6023B2BCB16A200276715 /* json-schema-to-grammar.cpp */; };
+		B3C602502BCB16A200276715 /* sampling.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6023C2BCB16A200276715 /* sampling.h */; };
+		B3C602512BCB16A200276715 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6023D2BCB16A200276715 /* stb_image.h */; };
 		B3CB9A002BCA29F500C4CFDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FE2BCA29F500C4CFDD /* README.md */; };
 		B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FF2BCA29F500C4CFDD /* LICENSE */; };
 		B3CB9A032BCA2AA400C4CFDD /* .github in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A022BCA2AA400C4CFDD /* .github */; };
@@ -79,6 +99,27 @@
 		B3C602112BCB0E6600276715 /* unicode-data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "unicode-data.cpp"; path = "../llama.cpp/unicode-data.cpp"; sourceTree = "<group>"; };
 		B3C602122BCB0E6600276715 /* ggml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = ../llama.cpp/ggml.c; sourceTree = "<group>"; };
 		B3C602132BCB0E6600276715 /* ggml-backend.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-backend.c"; path = "../llama.cpp/ggml-backend.c"; sourceTree = "<group>"; };
+		B3C602282BCB13F700276715 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../llama.cpp/examples/main/main.cpp; sourceTree = "<group>"; };
+		B3C6022A2BCB16A100276715 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../llama.cpp/common/common.h; sourceTree = "<group>"; };
+		B3C6022B2BCB16A100276715 /* train.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = train.cpp; path = ../llama.cpp/common/train.cpp; sourceTree = "<group>"; };
+		B3C6022C2BCB16A100276715 /* train.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = train.h; path = ../llama.cpp/common/train.h; sourceTree = "<group>"; };
+		B3C6022D2BCB16A100276715 /* grammar-parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "grammar-parser.h"; path = "../llama.cpp/common/grammar-parser.h"; sourceTree = "<group>"; };
+		B3C6022E2BCB16A100276715 /* ngram-cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ngram-cache.h"; path = "../llama.cpp/common/ngram-cache.h"; sourceTree = "<group>"; };
+		B3C6022F2BCB16A100276715 /* sampling.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = sampling.cpp; path = ../llama.cpp/common/sampling.cpp; sourceTree = "<group>"; };
+		B3C602302BCB16A100276715 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = ../llama.cpp/common/json.hpp; sourceTree = "<group>"; };
+		B3C602312BCB16A100276715 /* json-schema-to-grammar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "json-schema-to-grammar.h"; path = "../llama.cpp/common/json-schema-to-grammar.h"; sourceTree = "<group>"; };
+		B3C602322BCB16A100276715 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = ../llama.cpp/common/common.cpp; sourceTree = "<group>"; };
+		B3C602332BCB16A200276715 /* base64.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = base64.hpp; path = ../llama.cpp/common/base64.hpp; sourceTree = "<group>"; };
+		B3C602342BCB16A200276715 /* console.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = console.cpp; path = ../llama.cpp/common/console.cpp; sourceTree = "<group>"; };
+		B3C602352BCB16A200276715 /* build-info.cpp.in */ = {isa = PBXFileReference; lastKnownFileType = text; name = "build-info.cpp.in"; path = "../llama.cpp/common/build-info.cpp.in"; sourceTree = "<group>"; };
+		B3C602362BCB16A200276715 /* console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = console.h; path = ../llama.cpp/common/console.h; sourceTree = "<group>"; };
+		B3C602372BCB16A200276715 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = log.h; path = ../llama.cpp/common/log.h; sourceTree = "<group>"; };
+		B3C602382BCB16A200276715 /* build-info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "build-info.cpp"; path = "../llama.cpp/common/build-info.cpp"; sourceTree = "<group>"; };
+		B3C602392BCB16A200276715 /* ngram-cache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ngram-cache.cpp"; path = "../llama.cpp/common/ngram-cache.cpp"; sourceTree = "<group>"; };
+		B3C6023A2BCB16A200276715 /* grammar-parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "grammar-parser.cpp"; path = "../llama.cpp/common/grammar-parser.cpp"; sourceTree = "<group>"; };
+		B3C6023B2BCB16A200276715 /* json-schema-to-grammar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "json-schema-to-grammar.cpp"; path = "../llama.cpp/common/json-schema-to-grammar.cpp"; sourceTree = "<group>"; };
+		B3C6023C2BCB16A200276715 /* sampling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sampling.h; path = ../llama.cpp/common/sampling.h; sourceTree = "<group>"; };
+		B3C6023D2BCB16A200276715 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = ../llama.cpp/common/stb_image.h; sourceTree = "<group>"; };
 		B3CB99FE2BCA29F500C4CFDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B3CB99FF2BCA29F500C4CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B3CB9A022BCA2AA400C4CFDD /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
@@ -102,6 +143,27 @@
 		B3C2C1922BCA1FE800F9ABEE = {
 			isa = PBXGroup;
 			children = (
+				B3C602332BCB16A200276715 /* base64.hpp */,
+				B3C602382BCB16A200276715 /* build-info.cpp */,
+				B3C602352BCB16A200276715 /* build-info.cpp.in */,
+				B3C602322BCB16A100276715 /* common.cpp */,
+				B3C6022A2BCB16A100276715 /* common.h */,
+				B3C602342BCB16A200276715 /* console.cpp */,
+				B3C602362BCB16A200276715 /* console.h */,
+				B3C6023A2BCB16A200276715 /* grammar-parser.cpp */,
+				B3C6022D2BCB16A100276715 /* grammar-parser.h */,
+				B3C6023B2BCB16A200276715 /* json-schema-to-grammar.cpp */,
+				B3C602312BCB16A100276715 /* json-schema-to-grammar.h */,
+				B3C602302BCB16A100276715 /* json.hpp */,
+				B3C602372BCB16A200276715 /* log.h */,
+				B3C602392BCB16A200276715 /* ngram-cache.cpp */,
+				B3C6022E2BCB16A100276715 /* ngram-cache.h */,
+				B3C6022F2BCB16A100276715 /* sampling.cpp */,
+				B3C6023C2BCB16A200276715 /* sampling.h */,
+				B3C6023D2BCB16A200276715 /* stb_image.h */,
+				B3C6022B2BCB16A100276715 /* train.cpp */,
+				B3C6022C2BCB16A100276715 /* train.h */,
+				B3C602282BCB13F700276715 /* main.cpp */,
 				B3C6020E2BCB0E6600276715 /* ggml-alloc.c */,
 				B3C602082BCB0E6600276715 /* ggml-alloc.h */,
 				B3C602092BCB0E6600276715 /* ggml-backend-impl.h */,
@@ -232,6 +294,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C6023E2BCB16A200276715 /* common.h in Sources */,
+				B3C6023F2BCB16A200276715 /* train.cpp in Sources */,
+				B3C602402BCB16A200276715 /* train.h in Sources */,
+				B3C602412BCB16A200276715 /* grammar-parser.h in Sources */,
+				B3C602422BCB16A200276715 /* ngram-cache.h in Sources */,
+				B3C602432BCB16A200276715 /* sampling.cpp in Sources */,
+				B3C602442BCB16A200276715 /* json.hpp in Sources */,
+				B3C602452BCB16A200276715 /* json-schema-to-grammar.h in Sources */,
+				B3C602462BCB16A200276715 /* common.cpp in Sources */,
+				B3C602472BCB16A200276715 /* base64.hpp in Sources */,
+				B3C602482BCB16A200276715 /* console.cpp in Sources */,
+				B3C6024A2BCB16A200276715 /* console.h in Sources */,
+				B3C6024B2BCB16A200276715 /* log.h in Sources */,
+				B3C6024C2BCB16A200276715 /* build-info.cpp in Sources */,
+				B3C6024D2BCB16A200276715 /* ngram-cache.cpp in Sources */,
+				B3C6024E2BCB16A200276715 /* grammar-parser.cpp in Sources */,
+				B3C6024F2BCB16A200276715 /* json-schema-to-grammar.cpp in Sources */,
+				B3C602502BCB16A200276715 /* sampling.h in Sources */,
+				B3C602512BCB16A200276715 /* stb_image.h in Sources */,
+				B3C602292BCB13F700276715 /* main.cpp in Sources */,
 				B3C602142BCB0E6600276715 /* unicode.cpp in Sources */,
 				B3C602152BCB0E6600276715 /* unicode-data.h in Sources */,
 				B3C602162BCB0E6600276715 /* ggml-quants.h in Sources */,
@@ -436,6 +518,7 @@
 					"-Wunreachable-code-return",
 					"-Wno-conversion",
 					"-Wdouble-promotion",
+					"-DJOKE",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fPIC",
@@ -533,6 +616,7 @@
 					"-Wunreachable-code-return",
 					"-Wno-conversion",
 					"-Wdouble-promotion",
+					"-DJOKE",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fPIC",

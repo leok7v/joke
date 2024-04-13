@@ -1,23 +1,39 @@
 #include "service.h"
 #include <assert.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <pthread.h>
 
 #define null NULL
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wcast-qual"
 
+#ifndef countof
+#define countof(a) (sizeof(a) / sizeof((a)[0]))
+#endif
+
+int run(int argc, char ** argv);
 
 static void service_ini(void) {
     
 }
 
 static void* load_thread(void *argument) {
-    const int32_t ms = random() % 1000 + 250;
-    struct timespec delay = { .tv_sec = 0, .tv_nsec = 1000 * 1000 * ms };
-    nanosleep(&delay, null);
+    const char* file = (const char*)argument;
+    printf("file: %s", file);
+    const char* argv[] = {
+        "joke", // executable name
+        "-m",
+        file,
+        "-p",
+        "Once upon a time"
+    };
+    int argc = countof(argv);
+    int r = run(argc, (char**)argv);
+    printf("r: %d", r);
     if (service.loaded != null) {
         service.loaded(0, "");
     }
@@ -26,9 +42,11 @@ static void* load_thread(void *argument) {
 
 static pthread_t thread_load;
 
-static void service_load(const char* file) {
+static void service_load(const char* f) {
     assert(thread_load == 0);
-    pthread_create(&thread_load, null, load_thread, null);
+    static char file[16 * 1024];
+    snprintf(file, countof(file) - 1, "%s", f);
+    pthread_create(&thread_load, null, load_thread, (void*)file);
     pthread_detach(thread_load);
 }
 

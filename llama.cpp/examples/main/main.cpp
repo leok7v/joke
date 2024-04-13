@@ -117,7 +117,16 @@ static void llama_log_callback_logTee(ggml_log_level level, const char * text, v
     LOG_TEE("%s", text);
 }
 
+#ifdef JOKE
+extern "C" {
+int run(int argc, char ** argv);
+}
+
+int run(int argc, char ** argv) {
+#else
 int main(int argc, char ** argv) {
+#endif
+
     gpt_params params;
     g_params = &params;
 
