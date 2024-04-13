@@ -17,6 +17,7 @@
 		B3CB9A002BCA29F500C4CFDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FE2BCA29F500C4CFDD /* README.md */; };
 		B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FF2BCA29F500C4CFDD /* LICENSE */; };
 		B3CB9A032BCA2AA400C4CFDD /* .github in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A022BCA2AA400C4CFDD /* .github */; };
+		B3CB9A052BCA339B00C4CFDD /* llama.cpp in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A042BCA339B00C4CFDD /* llama.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B3CB99FE2BCA29F500C4CFDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B3CB99FF2BCA29F500C4CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B3CB9A022BCA2AA400C4CFDD /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
+		B3CB9A042BCA339B00C4CFDD /* llama.cpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = llama.cpp; path = ../llama.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B30810B62BCA2109001EF0AC /* Assets.xcassets */,
 				B3CB99FF2BCA29F500C4CFDD /* LICENSE */,
 				B3CB99FE2BCA29F500C4CFDD /* README.md */,
+				B3CB9A042BCA339B00C4CFDD /* llama.cpp */,
 				B3C2C19C2BCA1FE800F9ABEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CB9A052BCA339B00C4CFDD /* llama.cpp in Resources */,
 				B3CB9A032BCA2AA400C4CFDD /* .github in Resources */,
 				B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */,
 				B3CB9A002BCA29F500C4CFDD /* README.md in Resources */,
@@ -288,6 +292,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "..\\llama.cpp";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -329,6 +334,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "..\\llama.cpp";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
