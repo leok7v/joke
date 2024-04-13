@@ -5,7 +5,9 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
     @Published var progress: Double = 0
     @Published var downloading = false
     var name: String = "tinyllama-1.1b-chat-v1.0.Q8_0.gguf"
-    var model: String = "https://github.com/leok7v/joker/releases/download/2024-04-08/"
+//  var model: String = "https://github.com/leok7v/joker/releases/download/2024-04-08/"
+//  var model: String = "https://github.com/leok7v/joke/releases/download/2024-04-12/"
+    var model: String = "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/"
     var completion: ((Int) -> Void)?
 
     func destination() -> URL {
