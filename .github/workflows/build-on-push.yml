@@ -25,9 +25,11 @@ jobs:
 
       - name: Build Project
         run: |
-          xcodebuild -scheme xcode/joke -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-
+          pushd xcode
+          xcodebuild -scheme joke -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          popd
       - name: Archive Project
         run: |
-          xcodebuild -scheme xcode/joke -sdk iphoneos -configuration Release archive -archivePath ./build/joke.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-
+          pushd xcode
+          xcodebuild -scheme joke -sdk iphoneos -configuration Release archive -archivePath ../build/joke.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+          popd
