@@ -1,0 +1,7 @@
+.DS_Store
+xcode/DerivedData/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcodeproj/xcuserdata/*.xcuserdatad/*/*
+*.swp
+xcode/joke.xcodeproj/project.xcworkspace/xcuserdata/leo.xcuserdatad/UserInterfaceState.xcuserstate
+xcode/joke.xcodeproj/xcuserdata/leo.xcuserdatad/xcschemes/xcschememanagement.plist
