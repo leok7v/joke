@@ -13548,7 +13548,7 @@ static void llama_model_quantize_internal(const std::string & fname_inp, const s
         quantize &= name.find("ssm_x.weight")      == std::string::npos;
         quantize &= name.find("ssm_dt.weight")     == std::string::npos;
 
-        enum ggml_type new_type;
+        enum ggml_type new_type = GGML_TYPE_F16;
         void * new_data;
         size_t new_size;
 

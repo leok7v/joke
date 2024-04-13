@@ -4,8 +4,11 @@
 #include <stdlib.h>
 #include <pthread.h>
 
-
 #define null NULL
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-parameter"
+
 
 static void service_ini(void) {
     
@@ -81,3 +84,4 @@ service_if service = {
     .fini = service_fini
 };
 
+#pragma clang diagnostic pop

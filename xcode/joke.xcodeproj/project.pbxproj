@@ -14,10 +14,33 @@
 		B371F5DA2BCA234600840A00 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D62BCA234600840A00 /* Downloader.swift */; };
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
+		B3C601BE2BCB0D1300276715 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BD2BCB0D1300276715 /* Accelerate.framework */; };
+		B3C601C02BCB0D1D00276715 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BF2BCB0D1D00276715 /* Metal.framework */; };
+		B3C601C22BCB0D2D00276715 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601C12BCB0D2D00276715 /* MetalKit.framework */; };
+		B3C601C42BCB0D3C00276715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601C32BCB0D3C00276715 /* Foundation.framework */; };
+		B3C602142BCB0E6600276715 /* unicode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602002BCB0E6600276715 /* unicode.cpp */; };
+		B3C602152BCB0E6600276715 /* unicode-data.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602012BCB0E6600276715 /* unicode-data.h */; };
+		B3C602162BCB0E6600276715 /* ggml-quants.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602022BCB0E6600276715 /* ggml-quants.h */; };
+		B3C602172BCB0E6600276715 /* unicode.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602032BCB0E6600276715 /* unicode.h */; };
+		B3C602182BCB0E6600276715 /* ggml-quants.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C602042BCB0E6600276715 /* ggml-quants.c */; };
+		B3C602192BCB0E6600276715 /* ggml-metal.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602052BCB0E6600276715 /* ggml-metal.h */; };
+		B3C6021A2BCB0E6600276715 /* ggml.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602062BCB0E6600276715 /* ggml.h */; };
+		B3C6021B2BCB0E6600276715 /* ggml-impl.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602072BCB0E6600276715 /* ggml-impl.h */; };
+		B3C6021C2BCB0E6600276715 /* ggml-alloc.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602082BCB0E6600276715 /* ggml-alloc.h */; };
+		B3C6021D2BCB0E6600276715 /* ggml-backend-impl.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602092BCB0E6600276715 /* ggml-backend-impl.h */; };
+		B3C6021E2BCB0E6600276715 /* llama.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020A2BCB0E6600276715 /* llama.cpp */; };
+		B3C6021F2BCB0E6600276715 /* ggml-backend.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020B2BCB0E6600276715 /* ggml-backend.h */; };
+		B3C602202BCB0E6600276715 /* ggml-metal.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020C2BCB0E6600276715 /* ggml-metal.m */; };
+		B3C602212BCB0E6600276715 /* ggml-common.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020D2BCB0E6600276715 /* ggml-common.h */; };
+		B3C602222BCB0E6600276715 /* ggml-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020E2BCB0E6600276715 /* ggml-alloc.c */; };
+		B3C602232BCB0E6600276715 /* llama.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020F2BCB0E6600276715 /* llama.h */; };
+		B3C602242BCB0E6600276715 /* ggml-metal.metal in Sources */ = {isa = PBXBuildFile; fileRef = B3C602102BCB0E6600276715 /* ggml-metal.metal */; };
+		B3C602252BCB0E6600276715 /* unicode-data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C602112BCB0E6600276715 /* unicode-data.cpp */; };
+		B3C602262BCB0E6600276715 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C602122BCB0E6600276715 /* ggml.c */; };
+		B3C602272BCB0E6600276715 /* ggml-backend.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C602132BCB0E6600276715 /* ggml-backend.c */; };
 		B3CB9A002BCA29F500C4CFDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FE2BCA29F500C4CFDD /* README.md */; };
 		B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FF2BCA29F500C4CFDD /* LICENSE */; };
 		B3CB9A032BCA2AA400C4CFDD /* .github in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A022BCA2AA400C4CFDD /* .github */; };
-		B3CB9A052BCA339B00C4CFDD /* llama.cpp in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A042BCA339B00C4CFDD /* llama.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +55,33 @@
 		B371F5D72BCA234600840A00 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../src/Toast.swift; sourceTree = "<group>"; };
 		B371F5D82BCA234600840A00 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../src/Service.swift; sourceTree = "<group>"; };
 		B3C2C19B2BCA1FE800F9ABEE /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C601BD2BCB0D1300276715 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		B3C601BF2BCB0D1D00276715 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		B3C601C12BCB0D2D00276715 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		B3C601C32BCB0D3C00276715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B3C602002BCB0E6600276715 /* unicode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = unicode.cpp; path = ../llama.cpp/unicode.cpp; sourceTree = "<group>"; };
+		B3C602012BCB0E6600276715 /* unicode-data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "unicode-data.h"; path = "../llama.cpp/unicode-data.h"; sourceTree = "<group>"; };
+		B3C602022BCB0E6600276715 /* ggml-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-quants.h"; path = "../llama.cpp/ggml-quants.h"; sourceTree = "<group>"; };
+		B3C602032BCB0E6600276715 /* unicode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = unicode.h; path = ../llama.cpp/unicode.h; sourceTree = "<group>"; };
+		B3C602042BCB0E6600276715 /* ggml-quants.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-quants.c"; path = "../llama.cpp/ggml-quants.c"; sourceTree = "<group>"; };
+		B3C602052BCB0E6600276715 /* ggml-metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-metal.h"; path = "../llama.cpp/ggml-metal.h"; sourceTree = "<group>"; };
+		B3C602062BCB0E6600276715 /* ggml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ggml.h; path = ../llama.cpp/ggml.h; sourceTree = "<group>"; };
+		B3C602072BCB0E6600276715 /* ggml-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-impl.h"; path = "../llama.cpp/ggml-impl.h"; sourceTree = "<group>"; };
+		B3C602082BCB0E6600276715 /* ggml-alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-alloc.h"; path = "../llama.cpp/ggml-alloc.h"; sourceTree = "<group>"; };
+		B3C602092BCB0E6600276715 /* ggml-backend-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend-impl.h"; path = "../llama.cpp/ggml-backend-impl.h"; sourceTree = "<group>"; };
+		B3C6020A2BCB0E6600276715 /* llama.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = llama.cpp; path = ../llama.cpp/llama.cpp; sourceTree = "<group>"; };
+		B3C6020B2BCB0E6600276715 /* ggml-backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend.h"; path = "../llama.cpp/ggml-backend.h"; sourceTree = "<group>"; };
+		B3C6020C2BCB0E6600276715 /* ggml-metal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ggml-metal.m"; path = "../llama.cpp/ggml-metal.m"; sourceTree = "<group>"; };
+		B3C6020D2BCB0E6600276715 /* ggml-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-common.h"; path = "../llama.cpp/ggml-common.h"; sourceTree = "<group>"; };
+		B3C6020E2BCB0E6600276715 /* ggml-alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-alloc.c"; path = "../llama.cpp/ggml-alloc.c"; sourceTree = "<group>"; };
+		B3C6020F2BCB0E6600276715 /* llama.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = llama.h; path = ../llama.cpp/llama.h; sourceTree = "<group>"; };
+		B3C602102BCB0E6600276715 /* ggml-metal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = "ggml-metal.metal"; path = "../llama.cpp/ggml-metal.metal"; sourceTree = "<group>"; };
+		B3C602112BCB0E6600276715 /* unicode-data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "unicode-data.cpp"; path = "../llama.cpp/unicode-data.cpp"; sourceTree = "<group>"; };
+		B3C602122BCB0E6600276715 /* ggml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = ../llama.cpp/ggml.c; sourceTree = "<group>"; };
+		B3C602132BCB0E6600276715 /* ggml-backend.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-backend.c"; path = "../llama.cpp/ggml-backend.c"; sourceTree = "<group>"; };
 		B3CB99FE2BCA29F500C4CFDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B3CB99FF2BCA29F500C4CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B3CB9A022BCA2AA400C4CFDD /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
-		B3CB9A042BCA339B00C4CFDD /* llama.cpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = llama.cpp; path = ../llama.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C601C22BCB0D2D00276715 /* MetalKit.framework in Frameworks */,
+				B3C601C02BCB0D1D00276715 /* Metal.framework in Frameworks */,
+				B3C601BE2BCB0D1300276715 /* Accelerate.framework in Frameworks */,
+				B3C601C42BCB0D3C00276715 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +102,26 @@
 		B3C2C1922BCA1FE800F9ABEE = {
 			isa = PBXGroup;
 			children = (
+				B3C6020E2BCB0E6600276715 /* ggml-alloc.c */,
+				B3C602082BCB0E6600276715 /* ggml-alloc.h */,
+				B3C602092BCB0E6600276715 /* ggml-backend-impl.h */,
+				B3C602132BCB0E6600276715 /* ggml-backend.c */,
+				B3C6020B2BCB0E6600276715 /* ggml-backend.h */,
+				B3C6020D2BCB0E6600276715 /* ggml-common.h */,
+				B3C602072BCB0E6600276715 /* ggml-impl.h */,
+				B3C602052BCB0E6600276715 /* ggml-metal.h */,
+				B3C6020C2BCB0E6600276715 /* ggml-metal.m */,
+				B3C602102BCB0E6600276715 /* ggml-metal.metal */,
+				B3C602042BCB0E6600276715 /* ggml-quants.c */,
+				B3C602022BCB0E6600276715 /* ggml-quants.h */,
+				B3C602122BCB0E6600276715 /* ggml.c */,
+				B3C602062BCB0E6600276715 /* ggml.h */,
+				B3C6020A2BCB0E6600276715 /* llama.cpp */,
+				B3C6020F2BCB0E6600276715 /* llama.h */,
+				B3C602112BCB0E6600276715 /* unicode-data.cpp */,
+				B3C602012BCB0E6600276715 /* unicode-data.h */,
+				B3C602002BCB0E6600276715 /* unicode.cpp */,
+				B3C602032BCB0E6600276715 /* unicode.h */,
 				B3CB9A022BCA2AA400C4CFDD /* .github */,
 				B371F5D62BCA234600840A00 /* Downloader.swift */,
 				B371F5D42BCA234600840A00 /* service.c */,
@@ -65,8 +135,8 @@
 				B30810B62BCA2109001EF0AC /* Assets.xcassets */,
 				B3CB99FF2BCA29F500C4CFDD /* LICENSE */,
 				B3CB99FE2BCA29F500C4CFDD /* README.md */,
-				B3CB9A042BCA339B00C4CFDD /* llama.cpp */,
 				B3C2C19C2BCA1FE800F9ABEE /* Products */,
+				B3C601BC2BCB0D1300276715 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +146,17 @@
 				B3C2C19B2BCA1FE800F9ABEE /* joke.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3C601BC2BCB0D1300276715 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3C601C32BCB0D3C00276715 /* Foundation.framework */,
+				B3C601C12BCB0D2D00276715 /* MetalKit.framework */,
+				B3C601BF2BCB0D1D00276715 /* Metal.framework */,
+				B3C601BD2BCB0D1300276715 /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3CB9A052BCA339B00C4CFDD /* llama.cpp in Resources */,
 				B3CB9A032BCA2AA400C4CFDD /* .github in Resources */,
 				B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */,
 				B3CB9A002BCA29F500C4CFDD /* README.md in Resources */,
@@ -152,6 +232,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C602142BCB0E6600276715 /* unicode.cpp in Sources */,
+				B3C602152BCB0E6600276715 /* unicode-data.h in Sources */,
+				B3C602162BCB0E6600276715 /* ggml-quants.h in Sources */,
+				B3C602172BCB0E6600276715 /* unicode.h in Sources */,
+				B3C602182BCB0E6600276715 /* ggml-quants.c in Sources */,
+				B3C602192BCB0E6600276715 /* ggml-metal.h in Sources */,
+				B3C6021A2BCB0E6600276715 /* ggml.h in Sources */,
+				B3C6021B2BCB0E6600276715 /* ggml-impl.h in Sources */,
+				B3C6021C2BCB0E6600276715 /* ggml-alloc.h in Sources */,
+				B3C6021D2BCB0E6600276715 /* ggml-backend-impl.h in Sources */,
+				B3C6021E2BCB0E6600276715 /* llama.cpp in Sources */,
+				B3C6021F2BCB0E6600276715 /* ggml-backend.h in Sources */,
+				B3C602202BCB0E6600276715 /* ggml-metal.m in Sources */,
+				B3C602212BCB0E6600276715 /* ggml-common.h in Sources */,
+				B3C602222BCB0E6600276715 /* ggml-alloc.c in Sources */,
+				B3C602232BCB0E6600276715 /* llama.h in Sources */,
+				B3C602242BCB0E6600276715 /* ggml-metal.metal in Sources */,
+				B3C602252BCB0E6600276715 /* unicode-data.cpp in Sources */,
+				B3C602262BCB0E6600276715 /* ggml.c in Sources */,
+				B3C602272BCB0E6600276715 /* ggml-backend.c in Sources */,
 				B30810B52BCA20E6001EF0AC /* app.swift in Sources */,
 				B371F5D92BCA234600840A00 /* service.c in Sources */,
 				B371F5DB2BCA234600840A00 /* Toast.swift in Sources */,
@@ -284,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = ../src/joke.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -308,6 +409,60 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"-D_XOPEN_SOURCE=600",
+					"-D_DARWIN_C_SOURCE",
+					"-DNDEBUG",
+					"-DGGML_USE_ACCELERATE",
+					"-DACCELERATE_NEW_LAPACK",
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DGGML_USE_METAL",
+					"-std=c11",
+					"-fPIC",
+					"-O3",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wcast-qual",
+					"-Wno-unused-function",
+					"-Wshadow",
+					"-Wstrict-prototypes",
+					"-Wpointer-arith",
+					"-Wmissing-prototypes",
+					"-Werror=implicit-int",
+					"-Werror=implicit-function-declaration",
+					"-pthread",
+					"-Wunreachable-code-break",
+					"-Wunreachable-code-return",
+					"-Wno-conversion",
+					"-Wdouble-promotion",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fPIC",
+					"-O3",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wcast-qual",
+					"-Wno-unused-function",
+					"-Wmissing-declarations",
+					"-Wmissing-noreturn",
+					"-pthread",
+					"-Wunreachable-code-break",
+					"-Wunreachable-code-return",
+					"-Wmissing-prototypes",
+					"-Wextra-semi",
+					"-I.",
+					"-Icommon",
+					"-D_XOPEN_SOURCE=600",
+					"-D_DARWIN_C_SOURCE",
+					"-DNDEBUG",
+					"-DGGML_USE_ACCELERATE",
+					"-DACCELERATE_NEW_LAPACK",
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DGGML_USE_METAL",
+					"-Wno-conversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leok7v.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -326,6 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_ENTITLEMENTS = ../src/joke.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -350,6 +506,60 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"-D_XOPEN_SOURCE=600",
+					"-D_DARWIN_C_SOURCE",
+					"-DNDEBUG",
+					"-DGGML_USE_ACCELERATE",
+					"-DACCELERATE_NEW_LAPACK",
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DGGML_USE_METAL",
+					"-std=c11",
+					"-fPIC",
+					"-O3",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wcast-qual",
+					"-Wno-unused-function",
+					"-Wshadow",
+					"-Wstrict-prototypes",
+					"-Wpointer-arith",
+					"-Wmissing-prototypes",
+					"-Werror=implicit-int",
+					"-Werror=implicit-function-declaration",
+					"-pthread",
+					"-Wunreachable-code-break",
+					"-Wunreachable-code-return",
+					"-Wno-conversion",
+					"-Wdouble-promotion",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-fPIC",
+					"-O3",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wcast-qual",
+					"-Wno-unused-function",
+					"-Wmissing-declarations",
+					"-Wmissing-noreturn",
+					"-pthread",
+					"-Wunreachable-code-break",
+					"-Wunreachable-code-return",
+					"-Wmissing-prototypes",
+					"-Wextra-semi",
+					"-I.",
+					"-Icommon",
+					"-D_XOPEN_SOURCE=600",
+					"-D_DARWIN_C_SOURCE",
+					"-DNDEBUG",
+					"-DGGML_USE_ACCELERATE",
+					"-DACCELERATE_NEW_LAPACK",
+					"-DACCELERATE_LAPACK_ILP64",
+					"-DGGML_USE_METAL",
+					"-Wno-conversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leok7v.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
