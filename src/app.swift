@@ -27,7 +27,7 @@ struct MyApp: App {
 
 let chat_prompt =
 """
-Gizmo the Glum Gadget" +
+Gizmo the Glum Gadget
 
 Gizmo is a robotic assistant with a distinctly gloomy outlook,
 despite being programmed to help with school projects and homework.
@@ -82,47 +82,75 @@ Gizmo: You are welcome. Another story?
 
 let gen_prompt =
 """
-Help me with my homework.
-Need to write a bedtime story with the following guidelines:
+Gizmo the Glum Gadget
+Gizmo is a robotic assistant with a distinctly gloomy outlook,
+despite being programmed to help with school projects and homework.
+Gizmo is helping with homework which is
+writing a very short bedtime story with the following guidelines:
 
-* Select the story at random from this list
-
-Snow White and the Seven Dwarfs.
-Beauty and the Beast.
-Sleeping Beauty.
-Rapunzel.
-Little Red Riding Hood.
-Hansel and Gretel.
-The Frog Prince.
-Jack and the Beanstalk.
-The Lion and the Mouse.
-Goldilocks and the Three Bears.
-The Three Little Pigs.
-The Gingerbread Man.
-The Emperor's New Clothes.
-Cinderella.
-The Ugly Duckling.
-The Princess and the Pea.
-The Elves and the Shoemaker.
-The Little Match Girl.
-Thumbelina.
-The Three Billy Goats Gruff.
-The Tortoise and the Hare.
-The Bremen Town Musicians.
-Puss in Boots.
-The Little Mermaid.
-
-* Or use any other well known folktale
-* Do not include and any discussions instructions or conclusions into generated content.
-* Keep names of all characters consistent in the story.
-* Keep the story grammatically simple with short sentences and plenty of dialogue.
-* Ensure the story is suitable for a sever-year-old child to understand.
-* Ensure non-violent nature of the story.
-* The story should be appropriate for putting a small child to bed and wishing them sweet dreams.
+* Based on [story] as write a short version of it in your own word.
 * The story should be purely narrative without an explicit moral or conclusion.
+* Do not include and any discussions instructions or conclusions into generated content.
+* Grammatically simple story with short sentences and plenty of dialogue.
+* Ensure non-violent nature of the story suitable for a sever-year-old child to understand.
+* The story should be appropriate for putting a small child to bed and wishing them sweet dreams.
 
-Begin the story with 'Once upon a time' end with 'The End' and focus solely on the content of the story.
+Begin the story with 'Once upon a time' end with 'The End' and focus 
+solely on the content of the story and keep it as short as possible.
 
 Once upon a time
 """
 
+let stories_with_description: [String] = [
+    "Cinderella - A kind girl attends a magical ball with the help of a fairy godmother.",
+    "Snow White and the Seven Dwarfs - A princess escapes a jealous queen and finds friends in the forest.",
+    "Beauty and the Beast - A young woman finds love and breaks a curse on a monstrous prince.",
+    "Sleeping Beauty - A princess falls into a deep sleep and is awakened by a brave prince.",
+    "Rapunzel - A girl with magical hair is trapped in a tower by a wicked witch.",
+    "Little Red Riding Hood - A girl encounters a cunning wolf on her way to visit her grandmother.",
+    "Hansel and Gretel - Two children defeat a wicked witch who lives in a gingerbread house.",
+    "The Frog Prince - A princess befriends a frog who turns out to be an enchanted prince.",
+    "Jack and the Beanstalk - A boy climbs a magical beanstalk and encounters a giant.",
+    "Goldilocks and the Three Bears - A girl explores a bear family's house and finds the perfect porridge.",
+    "The Three Little Pigs - Three pigs build houses and outwit a hungry wolf.",
+    "The Gingerbread Man - A sassy gingerbread man tries to outrun everyone who wants to eat him.",
+    "The Emperor's New Clothes - A vain emperor gets tricked into thinking he's wearing invisible clothes.",
+    "The Ugly Duckling - A misfit duckling discovers he's actually a beautiful swan.",
+    "The Princess and the Pea - A princess proves her sensitivity by feeling a pea under many mattresses.",
+    "The Elves and the Shoemaker - Hardworking shoemaker receives magical help from elves.",
+    "The Little Match Girl - A poor girl's dreams light up a cold winter night.",
+    "Thumbelina - A tiny girl born from a flower embarks on fantastical adventures.",
+    "The Three Billy Goats Gruff - Three goats outsmart a hungry troll living under a bridge.",
+    "The Tortoise and the Hare - A determined tortoise wins a race against a boastful hare.",
+    "The Bremen Town Musicians - Aging farm animals escape and find a new life as musicians.",
+    "The Lion and the Mouse - A mighty lion is helped by a tiny mouse.",
+    "Puss in Boots - A clever cat uses his wit to help his master rise in society.",
+    "The Little Mermaid - A mermaid makes a deal with a sea witch to become human."
+]
+
+let stories: [String] = [
+    "Cinderella",
+    "Snow White and the Seven Dwarfs",
+    "Beauty and the Beast",
+    "Sleeping Beauty",
+    "Rapunzel",
+    "Little Red Riding Hood",
+    "Hansel and Gretel",
+    "The Frog Prince",
+    "Jack and the Beanstalk",
+    "Goldilocks and the Three Bears",
+    "The Three Little Pigs",
+    "The Gingerbread Man",
+    "The Emperor's New Clothes",
+    "The Ugly Duckling",
+    "The Princess and the Pea",
+    "The Elves and the Shoemaker",
+    "The Little Match Girl",
+    "Thumbelina",
+    "The Three Billy Goats Gruff",
+    "The Tortoise and the Hare",
+    "The Bremen Town Musicians",
+    "The Lion and the Mouse",
+    "Puss in Boots",
+    "The Little Mermaid"
+]

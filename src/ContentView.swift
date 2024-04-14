@@ -6,6 +6,7 @@ struct ContentView: View {
     // Accumulates full lines
     @State private var text = ""
     @State private var isSpeaking = false
+    @State private var isSpeakVisible = false
     // Accumulates current line until '\n'
     @State private var currentLine = "Once upon a time "
     @State private var errorText = ""
@@ -55,21 +56,24 @@ struct ContentView: View {
                     }
                 }
                 Spacer() // Pushes the button to the bottom
-                Button(action: {
-                    isSpeaking.toggle()
-                    if isSpeaking {
-                        for segment in textSegments {
-                            synthesizer.enqueue(segment.text)
+                if isSpeakVisible {
+                    Button(action: {
+                        isSpeaking.toggle()
+                        isSpeakVisible = false
+                        if isSpeaking {
+                            for segment in textSegments {
+                                synthesizer.enqueue(segment.text)
+                            }
+                        } else {
+                            synthesizer.cancel()
                         }
-                    } else {
-                        synthesizer.cancel()
+                    })
+                    {
+                        Text("\u{1F5E3}\u{1F4AC}") // Unicode for speech bubble emoji
+                            .font(.largeTitle) // You can adjust the font size as needed
                     }
-                })
-                {
-                    Text("\u{1F5E3}\u{1F4AC}") // Unicode for speech bubble emoji
-                        .font(.largeTitle) // You can adjust the font size as needed
+                    .padding()
                 }
-                .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             Toast(message: errorText, isError: true, isVisible: $showToast)
@@ -151,13 +155,17 @@ struct ContentView: View {
     }
     
     func loaded() {
-        Service.generate(prompt: gen_prompt,
+        let ix = Int.random(in: 0..<stories_with_description.count)
+        let prompt = gen_prompt.replacingOccurrences(of: "[story]", 
+                                    with: stories_with_description[ix])
+        Service.generate(prompt: prompt,
              token: { text in DispatchQueue.main.async { token(text) } },
              done: { DispatchQueue.main.async { done() } })
     }
 
     func done() {
         statusText = ""
+        isSpeakVisible = true
     }
 }
 

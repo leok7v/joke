@@ -66,7 +66,6 @@ static void* process_output(void *arg) {
         text[n] = 0x00;
         service.token(text);
     }
-    close(pipe_read_fd); // Close the read end of the pipe
     return null;
 }
 
@@ -136,6 +135,7 @@ static void* generate_thread(void *argument) {
     pthread_create(&tid, null, process_output, (void*)(uintptr_t)pipefd[0]);
     int r = run(argc, (char**)argv); // Call the function run
     close(pipefd[1]); // Close the write end of the pipe
+    close(pipefd[0]); // Close the read end of the pipe
     // Wait for the processing thread to finish
     pthread_join(tid, null);
     dup2(stdout_copy, STDOUT_FILENO); // Restore stdout

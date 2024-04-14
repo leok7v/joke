@@ -145,15 +145,15 @@
 		B3C2C1922BCA1FE800F9ABEE = {
 			isa = PBXGroup;
 			children = (
-				B371F5D42BCA234600840A00 /* service.c */,
-				B371F5D52BCA234600840A00 /* service.h */,
-				B371F5D82BCA234600840A00 /* Service.swift */,
-				B371F5D72BCA234600840A00 /* Toast.swift */,
 				B30810B32BCA20E6001EF0AC /* app.swift */,
 				B30810B22BCA20E6001EF0AC /* ContentView.swift */,
+				B371F5D82BCA234600840A00 /* Service.swift */,
+				B371F5D72BCA234600840A00 /* Toast.swift */,
 				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
 				B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */,
 				B371F5D62BCA234600840A00 /* Downloader.swift */,
+				B371F5D42BCA234600840A00 /* service.c */,
+				B371F5D52BCA234600840A00 /* service.h */,
 				B3C602332BCB16A200276715 /* base64.hpp */,
 				B3C602382BCB16A200276715 /* build-info.cpp */,
 				B3C602352BCB16A200276715 /* build-info.cpp.in */,
