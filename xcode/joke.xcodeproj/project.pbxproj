@@ -14,6 +14,7 @@
 		B371F5DA2BCA234600840A00 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D62BCA234600840A00 /* Downloader.swift */; };
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
+		B3B605D32BCB4B6800E4CA4B /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */; };
 		B3C601BE2BCB0D1300276715 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BD2BCB0D1300276715 /* Accelerate.framework */; };
 		B3C601C02BCB0D1D00276715 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BF2BCB0D1D00276715 /* Metal.framework */; };
 		B3C601C22BCB0D2D00276715 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601C12BCB0D2D00276715 /* MetalKit.framework */; };
@@ -30,7 +31,7 @@
 		B3C6021D2BCB0E6600276715 /* ggml-backend-impl.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C602092BCB0E6600276715 /* ggml-backend-impl.h */; };
 		B3C6021E2BCB0E6600276715 /* llama.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020A2BCB0E6600276715 /* llama.cpp */; };
 		B3C6021F2BCB0E6600276715 /* ggml-backend.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020B2BCB0E6600276715 /* ggml-backend.h */; };
-		B3C602202BCB0E6600276715 /* ggml-metal.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020C2BCB0E6600276715 /* ggml-metal.m */; };
+		B3C602202BCB0E6600276715 /* ggml-metal.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020C2BCB0E6600276715 /* ggml-metal.m */; settings = {COMPILER_FLAGS = "-DGGML_METAL_NDEBUG"; }; };
 		B3C602212BCB0E6600276715 /* ggml-common.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020D2BCB0E6600276715 /* ggml-common.h */; };
 		B3C602222BCB0E6600276715 /* ggml-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020E2BCB0E6600276715 /* ggml-alloc.c */; };
 		B3C602232BCB0E6600276715 /* llama.h in Sources */ = {isa = PBXBuildFile; fileRef = B3C6020F2BCB0E6600276715 /* llama.h */; };
@@ -74,6 +75,7 @@
 		B371F5D62BCA234600840A00 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = ../src/Downloader.swift; sourceTree = "<group>"; };
 		B371F5D72BCA234600840A00 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../src/Toast.swift; sourceTree = "<group>"; };
 		B371F5D82BCA234600840A00 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../src/Service.swift; sourceTree = "<group>"; };
+		B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		B3C2C19B2BCA1FE800F9ABEE /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C601BD2BCB0D1300276715 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		B3C601BF2BCB0D1D00276715 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
@@ -143,6 +145,15 @@
 		B3C2C1922BCA1FE800F9ABEE = {
 			isa = PBXGroup;
 			children = (
+				B371F5D42BCA234600840A00 /* service.c */,
+				B371F5D52BCA234600840A00 /* service.h */,
+				B371F5D82BCA234600840A00 /* Service.swift */,
+				B371F5D72BCA234600840A00 /* Toast.swift */,
+				B30810B32BCA20E6001EF0AC /* app.swift */,
+				B30810B22BCA20E6001EF0AC /* ContentView.swift */,
+				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
+				B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */,
+				B371F5D62BCA234600840A00 /* Downloader.swift */,
 				B3C602332BCB16A200276715 /* base64.hpp */,
 				B3C602382BCB16A200276715 /* build-info.cpp */,
 				B3C602352BCB16A200276715 /* build-info.cpp.in */,
@@ -185,14 +196,6 @@
 				B3C602002BCB0E6600276715 /* unicode.cpp */,
 				B3C602032BCB0E6600276715 /* unicode.h */,
 				B3CB9A022BCA2AA400C4CFDD /* .github */,
-				B371F5D62BCA234600840A00 /* Downloader.swift */,
-				B371F5D42BCA234600840A00 /* service.c */,
-				B371F5D52BCA234600840A00 /* service.h */,
-				B371F5D82BCA234600840A00 /* Service.swift */,
-				B371F5D72BCA234600840A00 /* Toast.swift */,
-				B30810B32BCA20E6001EF0AC /* app.swift */,
-				B30810B22BCA20E6001EF0AC /* ContentView.swift */,
-				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
 				B30810B82BCA211F001EF0AC /* joke.entitlements */,
 				B30810B62BCA2109001EF0AC /* Assets.xcassets */,
 				B3CB99FF2BCA29F500C4CFDD /* LICENSE */,
@@ -311,6 +314,7 @@
 				B3C6024D2BCB16A200276715 /* ngram-cache.cpp in Sources */,
 				B3C6024E2BCB16A200276715 /* grammar-parser.cpp in Sources */,
 				B3C6024F2BCB16A200276715 /* json-schema-to-grammar.cpp in Sources */,
+				B3B605D32BCB4B6800E4CA4B /* SpeechSynthesizer.swift in Sources */,
 				B3C602502BCB16A200276715 /* sampling.h in Sources */,
 				B3C602512BCB16A200276715 /* stb_image.h in Sources */,
 				B3C602292BCB13F700276715 /* main.cpp in Sources */,
@@ -475,7 +479,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "..\\llama.cpp";
+				HEADER_SEARCH_PATHS = (
+					"..\\llama.cpp",
+					"..\\llame.cpp\\common",
+				);
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -517,8 +524,9 @@
 					"-Wunreachable-code-break",
 					"-Wunreachable-code-return",
 					"-Wno-conversion",
-					"-Wdouble-promotion",
+					"-Wno-double-promotion",
 					"-DJOKE",
+					"-DLOG_DISABLE_LOGS",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fPIC",
@@ -545,6 +553,7 @@
 					"-DACCELERATE_LAPACK_ILP64",
 					"-DGGML_USE_METAL",
 					"-Wno-conversion",
+					"-DLOG_DISABLE_LOGS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leok7v.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,7 +582,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "..\\llama.cpp";
+				HEADER_SEARCH_PATHS = (
+					"..\\llama.cpp",
+					"..\\llame.cpp\\common",
+				);
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -615,8 +627,9 @@
 					"-Wunreachable-code-break",
 					"-Wunreachable-code-return",
 					"-Wno-conversion",
-					"-Wdouble-promotion",
+					"-Wno-double-promotion",
 					"-DJOKE",
+					"-DLOG_DISABLE_LOGS",
 				);
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fPIC",
@@ -643,6 +656,7 @@
 					"-DACCELERATE_LAPACK_ILP64",
 					"-DGGML_USE_METAL",
 					"-Wno-conversion",
+					"-DLOG_DISABLE_LOGS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.leok7v.joke;
 				PRODUCT_NAME = "$(TARGET_NAME)";

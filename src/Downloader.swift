@@ -18,7 +18,6 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
 
     func needsDownload() -> Bool {
         let destination = self.destination()
-        print("path: " + destination.path())
         return !FileManager.default.fileExists(atPath: destination.path)
     }
 
@@ -34,7 +33,7 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
         self.completion = completion
         downloading = true
         guard let url = URL(string: model + name) else {
-            print("Invalid URL")
+//          print("Invalid URL")
             done(404)
             return
         }
@@ -61,7 +60,7 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
             try FileManager.default.moveItem(at: location, to: destinationURL)
             done(200)
         } catch {
-            print("File move error: \(error.localizedDescription)")
+//          print("File move error: \(error.localizedDescription)")
             done(500)
         }
     }

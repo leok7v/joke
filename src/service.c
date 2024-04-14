@@ -1,6 +1,7 @@
 #include "service.h"
 #include <assert.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
@@ -18,45 +19,51 @@
 
 static void service_ini(void) { }
 
-static const char* puntuation = ".\"?!";
+static const char* punctuation = ".\"?!";
+
+static bool is_punctuation(char ch) {
+    return strchr(punctuation, ch) != 0;
+}
 
 static void* process_output(void *arg) {
     int pipe_read_fd = (int)(uintptr_t)arg;
-    char buffer[128];
+    uint8_t buffer[128];
     ssize_t bytes_read;
-    static char text[1024];
-    int text_len = 0;
+    static uint8_t text[1024];
+    int n = 0;
     while ((bytes_read = read(pipe_read_fd, buffer, sizeof(buffer) - 4)) > 0) {
         buffer[bytes_read] = 0x00;
         for (int i = 0; i < bytes_read; ++i) {
-            text[text_len++] = buffer[i];
+            text[n++] = buffer[i];
+            // dump UTF8: sequences:
+//          if (buffer[i] >= 0x80) { fprintf(stderr, "char=0x%02X\n", buffer[i]); }
             if (buffer[i] <= 0x20) { // Check for whitespace or control characters
-                if (text_len > 0) {
-                    if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
-                        text[text_len++] = '\n';
+                if (n > 0) {
+                    if (is_punctuation(text[n - 1])) {
+                        text[n++] = '\n';
                     }
-                    text[text_len] = 0x00;
+                    text[n] = 0x00;
                     service.token(text); // Call token for each word
-                    text_len = 0; // Reset text array for the next word
+                    n = 0; // Reset text array for the next word
                 }
             } else {
-                if (text_len >= (int)sizeof(text) - 1) {
-                    if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
-                        text[text_len++] = '\n';
+                if (n >= (int)sizeof(text) - 1) {
+                    if (is_punctuation(text[n - 1])) {
+                        text[n++] = '\n';
                     }
                     text[sizeof(text) - 1] = 0x00;
                     service.token(text);
-                    text_len = 0;
+                    n = 0;
                 }
             }
         }
     }
     // Process any remaining characters in buffer
-    if (text_len > 0) {
-        if (text[text_len - 1] != '\n' && strrchr(puntuation, text[text_len - 1]) != null) {
-            text[text_len++] = '\n';
+    if (n > 0) {
+        if (is_punctuation(text[n - 1])) {
+            text[n++] = '\n';
         }
-        text[text_len] = 0x00;
+        text[n] = 0x00;
         service.token(text);
     }
     close(pipe_read_fd); // Close the read end of the pipe
@@ -69,7 +76,7 @@ static const char* model_name;
 
 static void* load_thread(void *argument) {
     model_name = (const char*)argument;
-    printf("model_name: %s\n", model_name);
+//  printf("model_name: %s\n", model_name);
     // TODO: preload model
     if (service.loaded != null) {
         service.loaded(0, "");
@@ -90,7 +97,7 @@ static void service_load(const char* f) {
 static void* generate_thread(void *argument) {
     const char* file = (const char*)model_name;
     const char* prompt = (const char*)argument;
-    printf("file: %s\n", file);
+//  printf("file: %s\n", file);
 #ifdef CHAT
     const char* argv[] = {
         "joke", // executable name
@@ -119,6 +126,7 @@ static void* generate_thread(void *argument) {
     };
 #endif
     int argc = countof(argv);
+    fflush(stdout); // any debug output flushed before we proceed
     int pipefd[2];
     pipe(pipefd); // Create a pipe
     int stdout_copy = dup(STDOUT_FILENO);
@@ -131,7 +139,8 @@ static void* generate_thread(void *argument) {
     // Wait for the processing thread to finish
     pthread_join(tid, null);
     dup2(stdout_copy, STDOUT_FILENO); // Restore stdout
-    printf("r: %d", r);
+//  printf("r: %d", r);
+    (void)r; // unused
     if (service.generated != null) {
         service.generated();
     }
@@ -140,7 +149,7 @@ static void* generate_thread(void *argument) {
 
 static pthread_t thread_generate;
 
-static void service_generate(const char* prompt) {
+static void service_generate(const uint8_t* prompt) {
     assert(thread_generate == 0);
     assert(thread_load == 0);
     static char p[128 * 1024 * 4];
@@ -151,23 +160,6 @@ static void service_generate(const char* prompt) {
 
 static void service_fini(void) {}
 
-static errno_t service_mirror(const uint8_t* input, int64_t input_bytes, 
-                              uint8_t* output, int64_t *output_bytes) {
-    assert(*output_bytes >= input_bytes);
-    if (random() % 4 != 0) {
-        memcpy(output, input, (size_t)input_bytes);
-        for (int32_t i = 0; i < input_bytes / 2; i++) {
-            uint8_t b = output[i];
-            output[i] = output[input_bytes - 1 - i];
-            output[input_bytes - 1 - i] = b;
-        }
-        *output_bytes = input_bytes;
-        return 0;
-    } else {
-        return 1 + (random() % (EPROTONOSUPPORT - 1));
-    }
-}
-
 service_if service = {
     .ini = service_ini,
     .load = service_load,
@@ -175,7 +167,6 @@ service_if service = {
     .generate = service_generate,
     .token = null,
     .generated = null,
-    .mirror = service_mirror,
     .fini = service_fini
 };
 
