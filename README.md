@@ -43,3 +43,17 @@ c++ $(CPPFLAGS)  -c examples/main/main.cpp -o examples/main/main.o
 c++ $(CPPFLAGS)  ggml.o llama.o common.o sampling.o grammar-parser.o build-info.o console.o ggml-metal.o ggml-alloc.o ggml-backend.o ggml-quants.o unicode.o unicode-data.o examples/main/main.o -o main -framework Accelerate -framework Foundation -framework Metal -framework MetalKit 
 ```
 
+Useful models to experiment with:
+
+https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
+
+https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q8_0.gguf
+    
+https://huggingface.co/collections/maddes8cht/stablelm-gguf-65552101dcf410fd072c6c87
+
+https://huggingface.co/collections/maddes8cht/open-llama-gguf-6554be6495885c0796c026a6
+
+https://huggingface.co/maddes8cht/openlm-research-open_llama_3b_v2-gguf
+
+https://huggingface.co/maddes8cht/openlm-research-open_llama_3b_v2-gguf/resolve/main/openlm-research-open_llama_3b_v2-Q8_0.gguf
+

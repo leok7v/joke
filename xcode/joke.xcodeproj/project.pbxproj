@@ -15,6 +15,7 @@
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
 		B3B605D32BCB4B6800E4CA4B /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */; };
+		B3B605D52BCB9C2A00E4CA4B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */; };
 		B3C601BE2BCB0D1300276715 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BD2BCB0D1300276715 /* Accelerate.framework */; };
 		B3C601C02BCB0D1D00276715 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BF2BCB0D1D00276715 /* Metal.framework */; };
 		B3C601C22BCB0D2D00276715 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601C12BCB0D2D00276715 /* MetalKit.framework */; };
@@ -76,6 +77,7 @@
 		B371F5D72BCA234600840A00 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../src/Toast.swift; sourceTree = "<group>"; };
 		B371F5D82BCA234600840A00 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../src/Service.swift; sourceTree = "<group>"; };
 		B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B3C2C19B2BCA1FE800F9ABEE /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C601BD2BCB0D1300276715 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		B3C601BF2BCB0D1D00276715 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
@@ -147,6 +149,7 @@
 			children = (
 				B30810B32BCA20E6001EF0AC /* app.swift */,
 				B30810B22BCA20E6001EF0AC /* ContentView.swift */,
+				B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */,
 				B371F5D82BCA234600840A00 /* Service.swift */,
 				B371F5D72BCA234600840A00 /* Toast.swift */,
 				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
@@ -305,6 +308,7 @@
 				B3C602432BCB16A200276715 /* sampling.cpp in Sources */,
 				B3C602442BCB16A200276715 /* json.hpp in Sources */,
 				B3C602452BCB16A200276715 /* json-schema-to-grammar.h in Sources */,
+				B3B605D52BCB9C2A00E4CA4B /* ContentViewModel.swift in Sources */,
 				B3C602462BCB16A200276715 /* common.cpp in Sources */,
 				B3C602472BCB16A200276715 /* base64.hpp in Sources */,
 				B3C602482BCB16A200276715 /* console.cpp in Sources */,

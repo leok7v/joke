@@ -1,7 +1,8 @@
 import SwiftUI
 
+
 @main
-struct MyApp: App {
+struct app: App {
     var body: some Scene {
         #if os(macOS)
         // Using Window for macOS
@@ -23,6 +24,14 @@ struct MyApp: App {
         #endif
     }
 }
+
+func trace(_ message: String) {
+    let stderr = FileHandle.standardError
+    if let data = "\(message)\n".data(using: .utf8) {
+        stderr.write(data)
+    }
+}
+
 
 
 let chat_prompt =
@@ -82,11 +91,7 @@ Gizmo: You are welcome. Another story?
 
 let gen_prompt =
 """
-Gizmo the Glum Gadget
-Gizmo is a robotic assistant with a distinctly gloomy outlook,
-despite being programmed to help with school projects and homework.
-Gizmo is helping with homework which is
-writing a very short bedtime story with the following guidelines:
+The homework is to write a very short bedtime story with the following guidelines:
 
 * Based on [story] as write a short version of it in your own word.
 * The story should be purely narrative without an explicit moral or conclusion.
@@ -95,8 +100,10 @@ writing a very short bedtime story with the following guidelines:
 * Ensure non-violent nature of the story suitable for a sever-year-old child to understand.
 * The story should be appropriate for putting a small child to bed and wishing them sweet dreams.
 
-Begin the story with 'Once upon a time' end with 'The End' and focus 
-solely on the content of the story and keep it as short as possible.
+Begin the story with 'Once upon a time' end with 'The End'
+The story should consist of no more than 5 paragraphs,
+with each paragraph containing no more than 5 sentences.
+The total word count should not exceed 200 words.
 
 Once upon a time
 """

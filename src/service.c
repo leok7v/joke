@@ -116,7 +116,7 @@ static void* generate_thread(void *argument) {
         "joke", // executable name
         "--no-display-prompt",
         "--ctx-size",  "2048",
-        "--n_predict", "2048",
+        "--n_predict", "400",
         "--repeat_penalty", "1.4",
         "-m",
         file,
