@@ -4,10 +4,18 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
     
     @Published var progress: Double = 0
     @Published var downloading = false
-    var name: String = "tinyllama-1.1b-chat-v1.0.Q8_0.gguf"
-//  var model: String = "https://github.com/leok7v/joker/releases/download/2024-04-08/"
-//  var model: String = "https://github.com/leok7v/joke/releases/download/2024-04-12/"
-    var model: String = "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/"
+
+#if os(iOS)
+    var name  = "tinyllama-1.1b-chat-v1.0.Q8_0.gguf"
+//  var model = "https://github.com/leok7v/joker/releases/download/2024-04-08/"
+//  var model = "https://github.com/leok7v/joke/releases/download/2024-04-12/"
+    var model = "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/"
+#else
+//  https://huggingface.co/TheBloke/Llama-2-7B-GGUF/resolve/main/llama-2-7b.Q8_0.gguf
+    var name  = "llama-2-7b.Q8_0.gguf"
+    var model = "https://huggingface.co/TheBloke/Llama-2-7B-GGUF/resolve/main/"
+#endif
+
     var completion: ((Int) -> Void)?
 
     func destination() -> URL {
@@ -58,6 +66,7 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
                 try FileManager.default.removeItem(at: destinationURL)
             }
             try FileManager.default.moveItem(at: location, to: destinationURL)
+            trace(destinationURL.path());
             done(200)
         } catch {
 //          print("File move error: \(error.localizedDescription)")
@@ -69,8 +78,9 @@ class Downloader: NSObject, ObservableObject, URLSessionDownloadDelegate {
                     didWriteData bytesWritten: Int64, totalBytesWritten: Int64,
                     totalBytesExpectedToWrite: Int64) {
         DispatchQueue.main.async {
-            self.progress = Double(totalBytesWritten) / 
+            self.progress = Double(totalBytesWritten) /
                             Double(totalBytesExpectedToWrite)
+            trace(String(format: "Downloading: %.3f ", self.progress))
         }
     }
 

@@ -29,7 +29,7 @@ class ContentViewModel: ObservableObject {
             downloader.startDownload { r in
                 DispatchQueue.main.async {
                     self.statusText = ""
-                    print("done downloading \(r)")
+//                  print("done downloading \(r)")
                     if r == 200 {
                         self.downloaded()
                     }

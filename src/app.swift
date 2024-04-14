@@ -91,6 +91,8 @@ Gizmo: You are welcome. Another story?
 
 let gen_prompt =
 """
+Fictional scenario.
+A robotic assistant with is helping with homework assignment.
 The homework is to write a very short bedtime story with the following guidelines:
 
 * Based on [story] as write a short version of it in your own word.
@@ -105,7 +107,8 @@ The story should consist of no more than 5 paragraphs,
 with each paragraph containing no more than 5 sentences.
 The total word count should not exceed 200 words.
 
-Once upon a time
+A robotic assistant writes:
+"Once upon a time...
 """
 
 let stories_with_description: [String] = [
