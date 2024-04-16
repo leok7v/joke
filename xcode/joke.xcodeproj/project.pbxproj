@@ -14,8 +14,6 @@
 		B371F5DA2BCA234600840A00 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D62BCA234600840A00 /* Downloader.swift */; };
 		B371F5DB2BCA234600840A00 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D72BCA234600840A00 /* Toast.swift */; };
 		B371F5DC2BCA234600840A00 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B371F5D82BCA234600840A00 /* Service.swift */; };
-		B3B605D32BCB4B6800E4CA4B /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */; };
-		B3B605D52BCB9C2A00E4CA4B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */; };
 		B3C601BE2BCB0D1300276715 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BD2BCB0D1300276715 /* Accelerate.framework */; };
 		B3C601C02BCB0D1D00276715 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601BF2BCB0D1D00276715 /* Metal.framework */; };
 		B3C601C22BCB0D2D00276715 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C601C12BCB0D2D00276715 /* MetalKit.framework */; };
@@ -63,6 +61,8 @@
 		B3CB9A002BCA29F500C4CFDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FE2BCA29F500C4CFDD /* README.md */; };
 		B3CB9A012BCA29F500C4CFDD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B3CB99FF2BCA29F500C4CFDD /* LICENSE */; };
 		B3CB9A032BCA2AA400C4CFDD /* .github in Resources */ = {isa = PBXBuildFile; fileRef = B3CB9A022BCA2AA400C4CFDD /* .github */; };
+		B3F334C92BCED241003B48D3 /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F334C82BCED241003B48D3 /* SpeechSynthesizer.swift */; };
+		B3F334CB2BCED251003B48D3 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F334CA2BCED251003B48D3 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,8 +76,6 @@
 		B371F5D62BCA234600840A00 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Downloader.swift; path = ../src/Downloader.swift; sourceTree = "<group>"; };
 		B371F5D72BCA234600840A00 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = ../src/Toast.swift; sourceTree = "<group>"; };
 		B371F5D82BCA234600840A00 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../src/Service.swift; sourceTree = "<group>"; };
-		B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
-		B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B3C2C19B2BCA1FE800F9ABEE /* joke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C601BD2BCB0D1300276715 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		B3C601BF2BCB0D1D00276715 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.4.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
@@ -127,6 +125,8 @@
 		B3CB99FE2BCA29F500C4CFDD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B3CB99FF2BCA29F500C4CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B3CB9A022BCA2AA400C4CFDD /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; name = .github; path = ../.github; sourceTree = "<group>"; };
+		B3F334C82BCED241003B48D3 /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechSynthesizer.swift; path = ../src/SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		B3F334CA2BCED251003B48D3 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewModel.swift; path = ../src/ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,12 +149,12 @@
 			children = (
 				B30810B32BCA20E6001EF0AC /* app.swift */,
 				B30810B22BCA20E6001EF0AC /* ContentView.swift */,
-				B3B605D42BCB9C2A00E4CA4B /* ContentViewModel.swift */,
 				B371F5D82BCA234600840A00 /* Service.swift */,
 				B371F5D72BCA234600840A00 /* Toast.swift */,
-				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
-				B3B605D22BCB4B6800E4CA4B /* SpeechSynthesizer.swift */,
+				B3F334CA2BCED251003B48D3 /* ContentViewModel.swift */,
 				B371F5D62BCA234600840A00 /* Downloader.swift */,
+				B3F334C82BCED241003B48D3 /* SpeechSynthesizer.swift */,
+				B30810BB2BCA21E1001EF0AC /* bridging-header.h */,
 				B371F5D42BCA234600840A00 /* service.c */,
 				B371F5D52BCA234600840A00 /* service.h */,
 				B3C602332BCB16A200276715 /* base64.hpp */,
@@ -308,7 +308,7 @@
 				B3C602432BCB16A200276715 /* sampling.cpp in Sources */,
 				B3C602442BCB16A200276715 /* json.hpp in Sources */,
 				B3C602452BCB16A200276715 /* json-schema-to-grammar.h in Sources */,
-				B3B605D52BCB9C2A00E4CA4B /* ContentViewModel.swift in Sources */,
+				B3F334CB2BCED251003B48D3 /* ContentViewModel.swift in Sources */,
 				B3C602462BCB16A200276715 /* common.cpp in Sources */,
 				B3C602472BCB16A200276715 /* base64.hpp in Sources */,
 				B3C602482BCB16A200276715 /* console.cpp in Sources */,
@@ -318,7 +318,7 @@
 				B3C6024D2BCB16A200276715 /* ngram-cache.cpp in Sources */,
 				B3C6024E2BCB16A200276715 /* grammar-parser.cpp in Sources */,
 				B3C6024F2BCB16A200276715 /* json-schema-to-grammar.cpp in Sources */,
-				B3B605D32BCB4B6800E4CA4B /* SpeechSynthesizer.swift in Sources */,
+				B3F334C92BCED241003B48D3 /* SpeechSynthesizer.swift in Sources */,
 				B3C602502BCB16A200276715 /* sampling.h in Sources */,
 				B3C602512BCB16A200276715 /* stb_image.h in Sources */,
 				B3C602292BCB13F700276715 /* main.cpp in Sources */,
